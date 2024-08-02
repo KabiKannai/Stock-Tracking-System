@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Voucher</title>
+    <link rel="stylesheet" href="PaymentVoucher.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="upperbox">
+        <header>
+          <h3 style="color: white; height: 20px; font-size: 40px;padding-top: 30px; position: absolute; top: 0; text-align: left; left: 150px;">BHARATHIDASAN UNIVERSITY</h3>
+          <!--<h4 style="color: white; height: 20px; font-size: 30px; padding-top: 50px; position: absolute; top: 0; text-align: left; left: 200px;">TECHNOLOGY PARK</h4>-->
+          <h5 style="color: white; height: 20px; font-size: 20px; position: absolute; top: 0; right: 0; text-align: right; right: 450;"><i class='bx bxs-location-plus'></i> KAJAMALAI CAMPUS, TVS TOLLCATE</h5>
+          <h5 style=" color: white; height: 20px; font-size: 20px; padding-top: 30px; position: absolute; top: 0; right: 0; text-align: right; right: 40px;">TIRUCHIRAPALLI-620023</h5>
+          <h5 style="color: white; height: 20px; font-size: 20px; padding-top: 60px; position: absolute; top: 0; right: 0; text-align: right; right: 80px;"><i class='bx bxs-phone-call' ></i> 0431 240 7092</h5>
+          <img src="download1.png" alt="BHARATHIDASAN UNIVERSITY" title="BHARATHIDASAN UNIVERSITY" style="height: 100px; width: 120px; position: absolute; top: 0; left: 0;object-fit: cover; width: 120px; height: 100px; left: 20px; float: right;">
+        </header>
+        </div>
+        <div class="Department">
+            <h2 style="color: #fff; text-decoration: underline; text-align: right; margin-right: 20px;">Department Of Computer Science & Engineering</h2>
+         </div>
+    <div class="container">
+        <h2>Payment Voucher</h2>
+        <form action="stocking.php" method="post" id="form2">
+            <div class="form-group">
+                <label for="headOfAccount">Head of Account</label>
+                <input type="text" id="headOfAccount" name="headOfAccount" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentDetails">Details of Payment and Authority</label>
+                <textarea id="paymentDetails" name="paymentDetails" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="invoiceNo">Invoice No</label>
+                <textarea type="text" id="invoiceNo" name="invoiceNo" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="total">Total</label>
+                <input type="number" id="total" name="total" required>
+            </div>
+            <div class="form-group">
+                <label for="fileNo">File No</label>
+                <input type="text" id="fileNo" name="fileNo" required>
+            </div>
+            <button  class="prevbtn" type="button">Previous</button>
+            <button class="nxtbtn" type="button">Next Page</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to save form data to sessionStorage
+        function saveFormData(formId) {
+            const form = document.querySelector(formId);
+            const formData = new FormData(form);
+            for (const [key, value] of formData.entries()) {
+                sessionStorage.setItem(key, value);
+            }
+        }
+
+        // Function to load form data from sessionStorage
+        function loadFormData(formId) {
+            const form = document.querySelector(formId);
+            for (let i = 0; i < sessionStorage.length; i++) {
+                const key = sessionStorage.key(i);
+                const value = sessionStorage.getItem(key);
+                form.elements[key].value = value;
+            }
+        }
+
+        // Save form data before navigating to next page
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFormData('#form2'); // Load form data when the page loads
+        });
+
+        // Setup page navigation buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const prevPageButton = document.querySelector('.prevbtn');
+            const nextPageButton = document.querySelector('.nxtbtn');
+
+            prevPageButton.addEventListener('click', function() {
+                saveFormData('#form2'); // Save form data before navigating to previous page
+                window.history.back(); // Navigate to the previous page
+            });
+
+            nextPageButton.addEventListener('click', function() {
+                saveFormData('#form2'); // Save form data before navigating to next page
+                window.location.href = 'Taxinvoice.html'; // Navigate to the next page (this page)
+            });
+        });
+    </script>
+
+</body>
+</html>

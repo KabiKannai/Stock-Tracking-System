@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Resource Details</title>
+    <link rel="stylesheet" href="AddResource.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="upperbox">
+        <header>
+          <h3 style="color: white; height: 20px; font-size: 40px; padding-top: 30px; position: absolute; top: 0; text-align: left; left: 150px;">BHARATHIDASAN UNIVERSITY</h3>
+          <!--<h4 style="color: white; height: 20px; font-size: 30px; padding-top: 50px; position: absolute; top: 0; text-align: left; left: 200px;">TECHNOLOGY PARK</h4>-->
+          <h5 style="color: white; height: 20px; font-size: 25px; padding-top: 20px; position: absolute; top: 0; right: 0; text-align: right; right:50px"><i class='bx bxs-location-plus'></i> KHAJAMALAI CAMPUS </h5>
+    <h5 style=" color: white; height: 20px; font-size: 25px; padding-top: 50px; position: absolute; top: 0; right: 0; text-align: right; right: 40px;">TIRUCHIRAPALLI-620023</h5>
+          <img src="download1.png" alt="BHARATHIDASAN UNIVERSITY" title="BHARATHIDASAN UNIVERSITY" style="height: 100px; width: 120px; position: absolute; top: 0; left: 0;object-fit: cover; width: 120px; height: 100px; left: 20px; float: right;">
+        </header>
+        </div>
+    <div class="Department">
+        <h2 style="color: #fff; text-decoration: underline; text-align: right; margin-right: 20px;">Department Of Computer Science, Engineering & Applications</h2>
+    </div>
+    <div class="container">
+        <h2>Add Resource Details</h2>
+        <form action="Resource.php" method="post" id="form1">
+            <h3 style="text-align: center; font-size: large;">Checkslip For Passing Of Bills</h3>
+            <div class="form-group">
+                <label for="academicYear">Academic Year</label>
+                <input type="text" id="academicYear" name="academicYear" required>
+            </div>
+            <div class="form-group">
+                <label for="slipreferenceNo">Bill Slip Reference No</label>
+                <input type="text" id="slipreferenceNo" name="slipreferenceNo" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Name Of The Department</label>
+                <input type="text" id="department" name="department" required>
+            </div>
+            <div class="form-group">
+                <label for="hod">Name Of The HOD</label>
+                <input type="text" id="hod" name="hod" required>
+            </div>
+            <div class="form-group">
+                <label for="headOfAccount">Head Of Account</label>
+                <input type="text" id="headOfAccount" name="headOfAccount" required>
+            </div>
+            <div class="form-group">
+                <label for="totalAmount">Total Amount Allotted</label>
+                <input type="number" id="totalAmount" name="totalAmount" required>
+            </div>
+            <div class="form-group">
+                <label for="referenceNo">Allotment Reference No</label>
+                <input type="text" pattern="[a-zA-Z0-9/]+" id="referenceNo" name="referenceNo" required>
+            </div>
+            <div class="form-group">
+                <label for="allotmentdate">Amount Allotment Date</label>
+                <input type="date" id="allotmentdate" name="allotmentdate" required>
+            </div>
+            <div class="form-group">
+                <label for="expenditure">Expenditure Already Incurred</label>
+                <input type="number" id="expenditure" name="expenditure" required>
+            </div>
+            <div class="form-group">
+                <label for="amountClaimed">Amount Claimed In This Bill</label>
+                <input type="number" id="amountClaimed" name="amountClaimed" required>
+            </div>
+            <div class="form-group">
+                <label for="balance">Balance Available</label>
+                <input type="number" id="balance" name="balance" required>
+            </div>
+            <div class="form-group">
+                <label for="remarks">Remarks</label>
+                <textarea id="remarks" name="remarks" rows="4" required></textarea>
+            </div>
+
+            <h2>Payment Voucher</h2>
+
+            <div class="form-group">
+                <label for="headOfAccount">Head of Account</label>
+                <input type="text" id="headOfAccount" name="headOfAccount" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentDetails">Details of Payment and Authority</label>
+                <textarea id="paymentDetails" name="paymentDetails" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="invoiceNo">Invoice No</label>
+                <textarea type="text" id="invoiceNo" name="invoiceNo" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="total">Total</label>
+                <input type="number" id="total" name="total" required>
+            </div>
+            <div class="form-group">
+                <label for="fileNo">File No</label>
+                <input type="text" id="fileNo" name="fileNo" required>
+            </div>
+
+            <h2>Tax Invoice</h2>
+
+            <div class="form-group">
+                <label for="invoiceNo">Invoice No</label>
+                <input type="text" id="invoiceNo2" name="invoiceNo2" required>
+            </div>
+            <div class="form-group">
+                <label for="invoiceDate">Invoice Date</label>
+                <input type="date" id="invoiceDate" name="invoiceDate" required>
+            </div>
+            <div class="form-group">
+                <label for="tinNo">TIN No</label>
+                <input type="text" id="tinNo" name="tinNo" required>
+            </div>
+            <div class="form-group">
+                <label for="areaCode">Area Code</label>
+                <input type="text" id="areaCode" name="areaCode" required>
+            </div>
+            <div class="form-group">
+                <label for="gstn">GSTN/UIN</label>
+                <input type="text" id="gstn" name="gstn" required>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Description</th>
+                        <th>Quantity</th>
+                        <th>Unit Rate</th>
+                        <th>Amount</th>                     
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="productDescription[]" id="productDescription[]" required></td>
+                        <td><input type="number" name="quantity[]" id="quantity[]" required></td>
+                        <td><input type="number" step="0.01" name="unitRate[]" id="unitRate[]" required></td>
+                        <td><input type="number" step="0.01" name="amount[]" id="amount[]" required></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>CGST</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="number" name="CGST[]" id="CGST[]" required></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                            <th>SGST</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="number" name="SGST[]" id="CGST[]" required></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+            <button type="button" class="addrow" onclick="addRow()">Add Product</button>
+
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="grossamt">Gross Amount</label>
+                    <input type="text" id="grossamt" name="grossamt" required>
+                </div>
+            </div>
+
+            <h2>Grand Total Form</h2>
+
+            <div class="form-group">
+                <label for="bankDetails">Bank Details</label>
+                <input type="text" id="bankDetails" name="bankDetails" required>
+            </div>
+            <div class="form-group">
+                <label for="detailsEnteredIn">Details Entered In</label>
+                <input type="text" id="detailsEnteredIn" name="detailsEnteredIn" required>
+            </div>
+            <div class="form-group">
+                <label for="stockRegisterPageNo">Stock Register Page No</label>
+                <input type="text" id="stockRegisterPageNo" name="stockRegisterPageNo" required>
+            </div>
+            <div class="form-group">
+                <label for="grandTotal">Grand Total</label>
+                <input type="number" id="grandTotal" name="grandTotal" step="0.01" required>
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+    <script>
+        function addRow() {
+            const productTable = document.querySelector("table tbody");
+            const CGSTTable = document.querySelectorAll("table")[1].querySelector("tbody");
+            const SGSTTable = document.querySelectorAll("table")[2].querySelector("tbody");
+    
+            const newRow = productTable.insertRow();
+            const productDescriptionCell = newRow.insertCell(0);
+            const quantityCell = newRow.insertCell(1);
+            const unitRateCell = newRow.insertCell(2);
+            const amountCell = newRow.insertCell(3);
+            const CGSTCell = CGSTTable.insertRow().insertCell(0);
+            const SGSTCell = SGSTTable.insertRow().insertCell(0);
+    
+            productDescriptionCell.innerHTML = '<input type="text" name="productDescription[]" required>';
+            quantityCell.innerHTML = '<input type="number" name="quantity[]" required>';
+            unitRateCell.innerHTML = '<input type="number" step="0.01" name="unitRate[]" required>';
+            amountCell.innerHTML = '<input type="number" step="0.01" name="amount[]" required>';
+            CGSTCell.innerHTML = '<input type="number" name="CGST[]" required>';
+            SGSTCell.innerHTML = '<input type="number" name="SGST[]" required>';
+        }
+        </script>
+
+</body>
+</html>

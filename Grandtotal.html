@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Total Form</title>
+    <link rel="stylesheet" href="Grandtotal.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="upperbox">
+        <header>
+          <h3 style="color: white; height: 20px; font-size: 40px;padding-top: 30px; position: absolute; top: 0; text-align: left; left: 150px;">BHARATHIDASAN UNIVERSITY</h3>
+          <!--<h4 style="color: white; height: 20px; font-size: 30px; padding-top: 50px; position: absolute; top: 0; text-align: left; left: 200px;">TECHNOLOGY PARK</h4>-->
+          <h5 style="color: white; height: 20px; font-size: 20px; position: absolute; top: 0; right: 0; text-align: right; right: 450;"><i class='bx bxs-location-plus'></i> KAJAMALAI CAMPUS, TVS TOLLCATE</h5>
+          <h5 style=" color: white; height: 20px; font-size: 20px; padding-top: 30px; position: absolute; top: 0; right: 0; text-align: right; right: 40px;">TIRUCHIRAPALLI-620023</h5>
+          <h5 style="color: white; height: 20px; font-size: 20px; padding-top: 60px; position: absolute; top: 0; right: 0; text-align: right; right: 80px;"><i class='bx bxs-phone-call' ></i> 0431 240 7092</h5>
+          <img src="download1.png" alt="BHARATHIDASAN UNIVERSITY" title="BHARATHIDASAN UNIVERSITY" style="height: 100px; width: 120px; position: absolute; top: 0; left: 0;object-fit: cover; width: 120px; height: 100px; left: 20px; float: right;">
+        </header>
+        </div>
+    <div class="Department">
+        <h2 style="color: #fff; text-decoration: underline; text-align: right; margin-right: 20px;">Department Of Computer Science & Engineering</h2>
+    </div>
+    <div class="container">
+        <h2>Grand Total Form</h2>
+        <form action="Resource.php" method="post">
+            <div class="form-group">
+                <label for="bankDetails">Bank Details</label>
+                <input type="text" id="bankDetails" name="bankDetails" required>
+            </div>
+            <div class="form-group">
+                <label for="detailsEnteredIn">Details Entered In</label>
+                <input type="text" id="detailsEnteredIn" name="detailsEnteredIn" required>
+            </div>
+            <div class="form-group">
+                <label for="stockRegisterPageNo">Stock Register Page No</label>
+                <input type="text" id="stockRegisterPageNo" name="stockRegisterPageNo" required>
+            </div>
+            <div class="form-group">
+                <label for="grandTotal">Grand Total</label>
+                <input type="number" id="grandTotal" name="grandTotal" step="0.01" required>
+            </div>
+
+            <a href="Taxinvoice.html"><button type="button">Previous</button></a>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
